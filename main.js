@@ -4,9 +4,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const lista = document.getElementById("lista");
     const reacaoDiv = document.querySelector(".reacao");
 
-    // Função para alterar a imagem da reação
     function mudarReacao(imagem) {
-        reacaoDiv.innerHTML = ''; // Limpa as imagens anteriores
+        reacaoDiv.innerHTML = ''; 
         const img = document.createElement('img');
         img.src = imagem;
         img.alt = 'Reação';
@@ -19,11 +18,9 @@ document.addEventListener("DOMContentLoaded", () => {
         if (tarefaTexto !== "") {
             const tarefaItem = document.createElement("li");
             
-            // Criando o contêiner do texto da tarefa
             const textoContainer = document.createElement("span");
             textoContainer.textContent = tarefaTexto;
 
-            // Criando o contêiner dos botões
             const botoesContainer = document.createElement("div");
             botoesContainer.classList.add("botoes-container");
 
@@ -53,9 +50,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
             botoesContainer.appendChild(editarButton);
             botoesContainer.appendChild(concluirButton);
-            botoesContainer.appendChild(excluirButton);  // Adicionando o botão de excluir
+            botoesContainer.appendChild(excluirButton);
 
-            // Adicionando texto e botões ao item da lista
             tarefaItem.appendChild(textoContainer);
             tarefaItem.appendChild(botoesContainer);
             lista.appendChild(tarefaItem);
